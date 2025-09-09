@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Fullstack project grupo HolaMundo25</title>
+
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#inicio" class="logo">MiSitio</a>
+            <ul class="nav-menu">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#cursos">Cursos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+                <li><a href="login.html">Iniciar Sesión</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <h1>Bienvenido a MiSitio</h1>
+            <p>Creamos experiencias digitales increíbles que transforman tu negocio y conectan con tus usuarios</p>
+            <a href="#servicios" class="cta-button">Descubre Más</a>
+        </div>
+    </section>
+
+    <!-- Carousel Section -->
+    <section class="carousel-section" id="galeria">
+        <div class="carousel-container">
+            <h2>Nuestra Galería</h2>
+            <div class="carousel">
+                <div class="carousel-inner" id="carouselInner">
+                    <div class="carousel-slide slide-1">
+                        <div>
+                            <h3>Diseño Creativo</h3>
+                            <p>Soluciones visuales impactantes</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide slide-2">
+                        <div>
+                            <h3>Desarrollo Web</h3>
+                            <p>Tecnología de vanguardia</p>
+                        </div>
+                    </div>
+                    <div class="carousel-slide slide-3">
+                        <div>
+                            <h3>Marketing Digital</h3>
+                            <p>Estrategias que funcionan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-controls">
+                <button class="carousel-btn" onclick="previousSlide()">❮</button>
+                <button class="carousel-btn" onclick="nextSlide()">❯</button>
+            </div>
+            <div class="carousel-indicators">
+                <div class="indicator active" onclick="currentSlide(1)"></div>
+                <div class="indicator" onclick="currentSlide(2)"></div>
+                <div class="indicator" onclick="currentSlide(3)"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cards Section -->
+    <section class="cards-section" id="cursos">
+        <div class="cards-container">
+            <h2>Nuestros Cursos</h2>
+            <div class="cards-grid">
+                <div class="card">
+                    <div class="card-icon">🎨</div>
+                    <h3>Diseño Web</h3>
+                    <p>Creamos interfaces atractivas y funcionales que cautivarán a tus usuarios y potenciarán tu marca en el mundo digital.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">💻</div>
+                    <h3>Desarrollo</h3>
+                    <p>Desarrollamos aplicaciones web robustas y escalables utilizando las últimas tecnologías y mejores prácticas.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📱</div>
+                    <h3>Mobile Apps</h3>
+                    <p>Aplicaciones móviles nativas e híbridas que brindan experiencias excepcionales en cualquier dispositivo.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚀</div>
+                    <h3>SEO & Marketing</h3>
+                    <p>Estrategias de marketing digital y SEO que aumentarán tu visibilidad online y generarán más conversiones.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🛡️</div>
+                    <h3>Seguridad</h3>
+                    <p>Implementamos las medidas de seguridad más avanzadas para proteger tu sitio web y los datos de tus usuarios.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📊</div>
+                    <h3>Analytics</h3>
+                    <p>Análisis profundos y reportes detallados que te ayudarán a tomar decisiones basadas en datos reales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Contacto -->
+    <section class="contact-section" id="contacto">
+        <div class="contact-container">
+            <div class="contact-header">
+                <h2>Contáctanos</h2>
+                <p>¿Tienes un proyecto en mente? ¡Nos encantaría escucharte!</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">📧</div>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@misitio.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📱</div>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+54 351 123-4567</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">📍</div>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p>Córdoba, Argentina</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">🕒</div>
+                        <div>
+                            <h4>Horarios</h4>
+                            <p>Lun - Vie: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName">Nombre *</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Apellido *</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="contactEmail" name="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Teléfono</label>
+                                <input type="tel" id="phone" name="phone">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Asunto *</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Selecciona un asunto</option>
+                                <option value="diseño">Diseño Web</option>
+                                <option value="desarrollo">Desarrollo</option>
+                                <option value="mobile">Mobile Apps</option>
+                                <option value="marketing">SEO & Marketing</option>
+                                <option value="seguridad">Seguridad</option>
+                                <option value="analytics">Analytics</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Cuéntanos sobre tu proyecto..." required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Enviar Mensaje</span>
+                            <span class="btn-loading" style="display: none;">Enviando...</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contacto">
+        <p>&copy; 2025 MiSitio. Todos los derechos reservados. | Contacto: info@misitio.com</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
